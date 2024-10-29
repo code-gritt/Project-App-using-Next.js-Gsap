@@ -40,7 +40,7 @@
 
   .yellowproject1 {
     position: absolute;
-    top: 370px;
+    top: 360px;
     height: 100%;
     bottom: 0;
     width: 50%;
@@ -60,7 +60,7 @@
   .project1subtitle1 {
     position: absolute;
     top: -0px;
-    left: 20px;
+    left: 5px;
     width: 50%;
     margin: auto;
   }
@@ -132,6 +132,7 @@
     z-index: -1;
     position: relative;
     color: #000000;
+    margin-top: 40px;
   }
 
   .big span {
@@ -242,6 +243,13 @@
     opacity: 0.5;
     display: grid !important;
     place-content: center;
+
+    backdrop-filter: blur(7px);
+    background: linear-gradient(
+      -35deg,
+      rgba(#eee, 0.55) 0%,
+      rgba(#fff, 0.55) 100%
+    );
   }
 
   .swiper-pagination .swiper-pagination-bullet-active {
