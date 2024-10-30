@@ -17,6 +17,7 @@ import { gsap } from "gsap";
 import Image from "next/image";
 import Project1 from "../../../components/project1/Project1";
 import Project2 from "../../../components/project2/Project2";
+import Project3 from "../../../components/project3/Project3";
 
 const Main = () => {
   const [active, setActive] = useState();
@@ -133,42 +134,7 @@ const Main = () => {
           <SwiperSlide
             className={`w-full h-full  ${active === 2 ? "first" : ""}`}
           >
-            <div className="blue"></div>
-            <div className="black"></div>
-            <div className="content">
-              <div className="title">
-                <div className="small">
-                  {/* Let's {isActive ? setActive(true) : setActive(false)} */}
-                  {/* {active && "active"} */}
-                </div>
-                <div className="big md:text-[200px] lg:text-[280px] text-[150px] md:top-0 top-[50px]">
-                  <span>B</span>
-                  <span>l</span>
-                  <span>o</span>
-                  <span>g</span>
-                  <span>A</span>
-                  <span>p</span>
-                  <span>p</span>
-                </div>
-              </div>
-              <div className="image relative">
-                {/* <Image alt="" src={img3} fill /> */}
-              </div>
-              <div className="absolute bottom-10 p-2  gap-4 text-[#fffcef] justify-center text-xl flex items-center w-full">
-                <span className="font-bold z-20">
-                  <b>302</b> MPH
-                </span>
-                <span className="font-bold z-20">
-                  <b>0-100</b> KMPH
-                </span>
-                <span className="font-bold z-20">
-                  <b>350</b> KW
-                </span>
-                <button className=" py-2 px-3 border border-[#00d2fa] rounded-[10px] text-[#00d2fa] cursor-pointer hover:bg-[#00d2fa] hover:text-[#1a1a15]">
-                  Discover Now <i className="fas fa-arrow-right"></i>
-                </button>
-              </div>
-            </div>
+            <Project3 />
           </SwiperSlide>
           <SwiperSlide
             className={`w-full h-full  ${active === 3 ? "first" : ""}`}
