@@ -67,7 +67,7 @@ export default function Home() {
         >
           Welcome.
           <p className="text-2xl text-center font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-            NOTE - Set your browser zoom level to 90%
+            Set your browser zoom level to 90%
           </p>
           <Link href="/mainproject">
             {" "}

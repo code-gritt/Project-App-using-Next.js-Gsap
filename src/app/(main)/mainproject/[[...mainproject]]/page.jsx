@@ -16,6 +16,7 @@ import { Pagination } from "swiper/modules";
 import { gsap } from "gsap";
 import Image from "next/image";
 import Project1 from "../../../components/project1/Project1";
+import Project2 from "../../../components/project2/Project2";
 
 const Main = () => {
   const [active, setActive] = useState();
@@ -126,40 +127,7 @@ const Main = () => {
           <SwiperSlide
             className={`w-full  h-full  ${active === 1 ? "first" : ""}`}
           >
-            <div className="red"></div>
-            <div className="black"></div>
-            <div className="content relative">
-              <div className="title">
-                <div className="small">
-                  {/* Let's {isActive ? setActive(true) : setActive(false)} */}
-                  {/* {active && "active"} */}
-                </div>
-                <div className="big  md:text-[200px] lg:text-[280px] text-[150px] md:top-0 top-[50px]">
-                  <span>R</span>
-                  <span>A</span>
-                  <span>C</span>
-                  <span>E</span>
-                </div>
-              </div>
-              <div className="image relative">
-                {/* <Image alt="" src={img2} fill /> */}
-                {/* <img src="images/img-1.png" alt=""> */}
-              </div>
-              <div className="absolute bottom-10 p-2  gap-4 text-[#fffcef] justify-center text-xl flex items-center w-full">
-                <span className="font-bold z-20">
-                  <b>302</b> MPH
-                </span>
-                <span className="font-bold z-20">
-                  <b>0-100</b> KMPH
-                </span>
-                <span className="font-bold z-20">
-                  <b>350</b> KW
-                </span>
-                <button className=" py-2 px-3 border border-[#d23f3d] rounded-[10px] text-[#d23f3d] cursor-pointer hover:bg-[#d23f3d] hover:text-[#1a1a15]">
-                  Discover Now <i className="fas fa-arrow-right"></i>
-                </button>
-              </div>
-            </div>
+            <Project2 />
           </SwiperSlide>
           {/* item3 */}
           <SwiperSlide
