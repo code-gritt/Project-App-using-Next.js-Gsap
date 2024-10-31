@@ -52,7 +52,7 @@ const ImageGrid = ({ timeline }) => {
             priority
             fill
             className={styles.imageGrid__image}
-            src="/project2/image1.jpg"
+            src="/project2/image1.png"
             alt=""
           />
         </div>
@@ -70,7 +70,7 @@ const ImageGrid = ({ timeline }) => {
             fill
             data-image-center
             className={styles.imageGrid__image}
-            src="/project2/image2.jpg"
+            src="/project2/image2.png"
             alt=""
           />
         </div>
@@ -83,7 +83,7 @@ const ImageGrid = ({ timeline }) => {
             priority
             fill
             className={styles.imageGrid__image}
-            src="/project2/image3.jpg"
+            src="/project2/image3.png"
             alt=""
           />
         </div>
