@@ -3,40 +3,35 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { gsap } from "gsap";
+import { SplitText } from "gsap-trial/SplitText";
 import ImageGrid from "./components/ImageGrid/index";
+gsap.registerPlugin(SplitText);
 
 const Project2 = () => {
   const router = useRouter();
   const [timeline, setTimeline] = useState(null);
 
-  useLayoutEffect(() => {
-    const condiv = gsap.context(() => {
-      const tl = gsap.timeline({
-        paused: true,
-        onComplete: () => router.push("/landing"),
-      });
-      setTimeline(tl);
-    });
+  let mySplitText = new SplitText(".split", { type: "chars" });
+  let chars = mySplitText.chars;
 
-    return () => condiv.revert();
-  }, []);
+  gsap.from(chars, {
+    yPercent: 130,
+    stagger: 0.05,
+    ease: "back.out",
+    duration: 2,
+    scrollTrigger: {
+      trigger: ".split",
+      start: "top 80%",
+      markers: true,
+    },
+  });
 
   return (
     <>
       <div className="contentproject2">
         <div className="titleproject2">
           <div className="big text-white z-10 md:text-[50px] lg:text-[100px] text-[50px] md:top-0 top-[50px]">
-            <span>T</span>
-            <span>o</span>
-            <span>d</span>
-            <span>o</span> {""}
-            <span>L</span>
-            <span>i</span>
-            <span>s</span>
-            <span>t</span> {""}
-            <span>A</span>
-            <span>p</span>
-            <span>p</span>
+            <h1 className="split">TodoList App</h1>
           </div>
         </div>
       </div>

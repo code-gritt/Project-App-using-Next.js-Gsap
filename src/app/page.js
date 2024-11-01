@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect, useState } from "react";
 import Head from "next/head";
 <Head>
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
@@ -7,6 +7,7 @@ import Head from "next/head";
 </Head>;
 import { gsap } from "gsap";
 import Link from "next/link";
+import AudioPlayer from "../app/components/AudioPlayer/AudioPlayer";
 
 export default function Home() {
   const comp = useRef(null);
@@ -91,6 +92,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <audio ref={audioRef} src="/holywars.mp3" />
           </Link>
         </h1>
       </div>
